@@ -1,4 +1,4 @@
-from graphics import Point, Window, Line
+from graphics import Cell, Point, Window, Line
 
 
 def main():
@@ -6,9 +6,13 @@ def main():
 
     p1 = Point(50, 50)
     p2 = Point(400, 200)
-    line = Line(p1, p2)
+    # line = Line(p1, p2)
+    #
+    # window.draw_line(line, fill_color="red")
 
-    window.draw_line(line, fill_color="red")
+    cell = Cell(window)
+    cell.draw(100, 200, 300, 400)
+    cell.draw(200, 300, 400, 500)
 
     window.wait_for_close()
 
