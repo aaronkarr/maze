@@ -4,7 +4,7 @@ import time
 
 
 class Maze:
-    def __init__(self, x, y, num_rows, num_cols, cell_size_x, cell_size_y, window):
+    def __init__(self, x, y, num_rows, num_cols, cell_size_x, cell_size_y, window=None):
         self._cells = []
         self._x = x
         self._y = y
@@ -41,3 +41,6 @@ class Maze:
             return
         self._window.redraw()
         time.sleep(0.05)
+
+    def _break_entrance_and_exit(self):
+        pass
